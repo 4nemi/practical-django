@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "djangosnippets"
+version = "0.1.0"
+description = ""
+authors = ["4nemi <4nemi.aaa@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.13"
+django = "^5.0.6"
+django-bootstrap5 = "^24.2"
+django-pygments-renderer = "^0.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
