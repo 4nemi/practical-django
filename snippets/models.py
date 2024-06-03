@@ -12,6 +12,9 @@ class Snippet(models.Model):
     created_at = models.DateTimeField("投稿日", auto_now_add=True)
     updated_at = models.DateTimeField("更新日", auto_now=True)
 
+    class Meta:
+        db_table = "snippets"
+
     def __str__(self):
         return self.title
 
@@ -25,3 +28,15 @@ class Comment(models.Model):
                                      on_delete=models.CASCADE)
     def __str__(self):
         return self.text
+
+
+class Tag(models.Model):
+    name = models.CharField("タグ名", max_length=32)
+    snippets = models.ManyToManyField(Snippet, related_name="tags",
+                                      related_query_name="tag")
+
+    class Meta:
+        db_table = "tags"
+
+    def __str__(self):
+        return f"{self.pk} {self.name}"
