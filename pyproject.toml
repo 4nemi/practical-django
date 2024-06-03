@@ -2,7 +2,7 @@
 name = "djangosnippets"
 version = "0.1.0"
 description = ""
-authors = ["4nemi <4nemi.aaa@gmail.com>"]
+authors = ["amni-sh <4nemi.aaa@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
