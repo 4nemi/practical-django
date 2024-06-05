@@ -25,3 +25,8 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),
 ]
+
+handler400 = 'snippets.views.handler400'
+handler403 = 'snippets.views.handler403'
+handler404 = 'snippets.views.handler404'
+handler500 = 'snippets.views.handler500'
